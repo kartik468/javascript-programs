@@ -1,27 +1,27 @@
-// pending
-function lenghtOfLongestSubstring(s) {
-    if (s.length === 0) {
+function lenghtOfLongestSubstring(inputString) {
+    if (inputString.length === 0) {
         return 0;
-    } else if (s.length === 1) {
+    } else if (inputString.length === 1) {
         return 1;
     }
 
     let lookup = new Map();
-    let len = s.length;
+    let len = inputString.length;
     let max = 0;
     let start = 0;
 
     for (let i = 0; i < len; i++) {
-        const c = s.charAt(i);
-        if (lookup.has(c) && lookup.get(c) >= start) {
-            start = lookup.get(c) + 1;
+        const ch = inputString.charAt(i);
+        if (lookup.has(ch) && lookup.get(ch) >= start) {
+            start = lookup.get(ch) + 1;
         }
-        lookup.set(c, i);
+        lookup.set(ch, i);
         max = Math.max(max, i - start + 1);
         
     }
     return max;
 }
 
-console.log(lenghtOfLongestSubstring('abcabcdeabc'))
+console.log(lenghtOfLongestSubstring('kartik')); // should return 5
+console.log(lenghtOfLongestSubstring('longest_substring')); // should return 8
 
