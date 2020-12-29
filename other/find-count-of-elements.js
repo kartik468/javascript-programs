@@ -1,6 +1,6 @@
 // find count of elements whose right side has small elements than it
-var inputArray0 = [1, 4, 5, 2, 3, 4]; // 5, 4 ==> 2
-var inputArray1 = [1, 4, 6, 5, 2, 3, 4]; // 6, 5, 4 ==> 3
+var inputArray0 = [1, 5, 2, 3, 4]; // 5, 4 ==> 2
+var inputArray1 = [1, 6, 5, 2, 3, 4]; // 6, 5, 4 ==> 3
 var inputArray2 = [5, 4, 3, 2, 1]; // 5, 4, 3, 2, 1 ==> 5
 var inputArray3 = [5, 4, 3, 2]; // 5, 4, 3, 2, 1 ==> 5
 
@@ -24,10 +24,11 @@ function getCount(inputArray) {
   return resultCount;
 }
 
-// getCount(inputArray0);
-// getCount(inputArray1);
-// getCount(inputArray2);
-
+getCount(inputArray0);
+getCount(inputArray1);
+getCount(inputArray2);
+getCount(inputArray3);
+console.log('=========');
 function getCountBruteForce(inputArray) {
   var resultCount = 0;
 
