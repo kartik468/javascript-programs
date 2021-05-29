@@ -1,0 +1,15 @@
+<!-- <div class="container" (scroll)="onContainerScroll($event)" >
+  <div class="data-table" (scroll)="onTableScroll($event)">
+    <div *ngFor="let user of currShownRows; index as i;" class="data-row data-row{{i}}" style="padding: 10px;">{{user.title}}</div>
+  </div>
+</div> -->
+
+<div class="main-container" [style.height.px]="containerHeight">
+  <div class="actual-rows data-table">
+    <div class="post-row data-row" *ngFor="let item of visiblePosts">{{item.title}}</div>
+  </div>
+  <div class="scrollable-div-container" [style.height.px]="containerHeight" (scroll)="onScroll($event)">
+    <div class="scrollable-div" [style.height.px]="totalTableHeight"></div>
+  </div>
+</div>
+<!--  -->

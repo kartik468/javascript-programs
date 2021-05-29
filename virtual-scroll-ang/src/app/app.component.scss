@@ -1,0 +1,22 @@
+.data-row {
+  height: 30px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.main-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollable-div-container {
+  width: 100%;
+  border: 3px solid;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
